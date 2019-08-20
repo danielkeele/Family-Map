@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment xmlns:map="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="415dp"
+        android:layout_height="509dp"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toTopOf="parent"
+        tools:context=".Fragments.MapsFragment" />
+
+    <TextView
+        android:id="@+id/arrow_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/right_arrow"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/event_info"
+        app:layout_constraintTop_toTopOf="@+id/event_info" />
+
+    <TextView
+        android:id="@+id/event_info"
+        android:layout_width="344dp"
+        android:layout_height="86dp"
+        android:background="@drawable/border_black"
+        android:gravity="start"
+        android:padding="10dp"
+        android:text="@string/event_information_will_display_here"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/map" />
+
+</android.support.constraint.ConstraintLayout>
